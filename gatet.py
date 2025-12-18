@@ -109,9 +109,9 @@ data = {
 }
 response = requests.post('https://remember.org.au/wp-admin/admin-ajax.php', headers=headers, data=data)
     
-    try:
-        result = re.search(r"class='gfield_description validation_message gfield_validation_message'>(.*?)<\/div><\/li>", response.text).group(1)
-    except:
+try:
+    result = re.search(r"class='gfield_description validation_message gfield_validation_message'>(.*?)<\/div><\/li>", response.text).group(1)
+except:
     
     
 
